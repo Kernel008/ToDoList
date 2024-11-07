@@ -7,3 +7,5 @@ Proje serve edildikten sonra /workList yoluna gidin.
 ![Proje Görseli](prev.jpg)
 
 Çalışma süresi olarak haftalık 45 saat belirtildiği için çalışma saatleri 5 gün ve 9 saat olarak belirlendi. Örnek veriler az olduğu için daha iyi bir görüntü adına saatlik bir tablo görüntüsü oluşturuldu. Daha çok veri ile işlem gerçekleştirileceği zaman tasarımda değişiklikler yapılıp haftalık listeleme yapılabilir. 
+
+Not: Görev atamaları yapılırken Greedy yöntemi esas alındı.
