@@ -1,1 +1,5 @@
-![Açıklama](https://prnt.sc/2TTpHcHpz8Je)
+# Proje Başlığı
+
+Bu projeyle ilgili detaylar:
+
+![Proje Görseli](images/proje-gorsel.png)
