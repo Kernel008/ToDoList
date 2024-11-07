@@ -2,4 +2,4 @@
 
 Bu projeyle ilgili detaylar:
 
-![Proje Görseli]([images/proje-gorsel.png](https://example.com/gorsel.png))
+![Proje Görseli](https://ibb.co/1q15XZy)
