@@ -2,4 +2,4 @@
 
 Bu projeyle ilgili detaylar:
 
-![Proje Görseli](images/proje-gorsel.png)
+![Proje Görseli](pev.jpg)
