@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work List</title>
+
+    {# CSS dosyasını ekleyelim #}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="overlayContainer">
+<div class="overlay overlayBorder"></div>
+<div class="day"><div class="title">Pazartesi</div><div class="overlay">1</div><div class="overlay">2</div><div class="overlay">3</div><div class="overlay">4</div><div class="overlay">5</div><div class="overlay">6</div><div class="overlay">7</div><div class="overlay">8</div><div class="overlay overlayBorder">9</div></div>
+<div class="day"><div class="title">Salı</div><div class="overlay">1</div><div class="overlay">2</div><div class="overlay">3</div><div class="overlay">4</div><div class="overlay">5</div><div class="overlay">6</div><div class="overlay">7</div><div class="overlay">8</div><div class="overlay overlayBorder">9</div></div>
+<div class="day"><div class="title">Çarşamba</div><div class="overlay">1</div><div class="overlay">2</div><div class="overlay">3</div><div class="overlay">4</div><div class="overlay">5</div><div class="overlay">6</div><div class="overlay">7</div><div class="overlay">8</div><div class="overlay overlayBorder">9</div></div>
+<div class="day"><div class="title">Perşembe</div><div class="overlay">1</div><div class="overlay">2</div><div class="overlay">3</div><div class="overlay">4</div><div class="overlay">5</div><div class="overlay">6</div><div class="overlay">7</div><div class="overlay">8</div><div class="overlay overlayBorder">9</div></div>
+<div class="day"><div class="title">Cuma</div><div class="overlay">1</div><div class="overlay">2</div><div class="overlay">3</div><div class="overlay">4</div><div class="overlay">5</div><div class="overlay">6</div><div class="overlay">7</div><div class="overlay">8</div><div class="overlay overlayBorder">9</div></div>
+</div>
+
+{% for developer in work_list %}
+    <div class="row">
+		{% if developer.tasks|length > 0 %}
+            <span><b>{{ developer.name }}</b> (İşgücü:{{ developer.efficiency }})</span>
+        {% endif %}
+		
+		{% for task in developer.tasks %}
+		<div class="dev dev{{ developer.name|slice(3) }}" style="width:{{task.hour/24*50}}%">
+		<span class="tooltip">Görev Sağlayıcı:{{task.provider}} | Görev ID:{{task.job}} | Süre:{{task.hour}} saat</span>
+		</div>
+		{% endfor %}
+		
+		{% if developer.tasks|length > 0 %}
+            <div class="total totalDev{{ developer.name|slice(3) }}">{{ developer.hours }} Saat</div>
+        {% endif %}
+	</div>
+{% endfor %}
+
+
+<script src="{{ asset('js/main.js') }}"></script>
+</body>
+</html>

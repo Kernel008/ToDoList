@@ -1,0 +1,13 @@
+# Symfony
+/var/
+/vendor/
+/.idea/
+/*.log
+/.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Composer directories
+/composer.phar
